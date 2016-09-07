@@ -1,6 +1,6 @@
 <?php
 
-namespace Math\NumericalAnalysis\NumericalIntegration;
+namespace MathPHP\NumericalAnalysis\NumericalIntegration;
 
 /**
  * Rectangle Method

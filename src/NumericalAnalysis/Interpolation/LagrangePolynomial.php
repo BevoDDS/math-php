@@ -1,8 +1,8 @@
 <?php
 
-namespace Math\NumericalAnalysis\Interpolation;
+namespace MathPHP\NumericalAnalysis\Interpolation;
 
-use Math\Functions\Arithmetic;
+use MathPHP\Functions\Arithmetic;
 
 /**
  * Lagrange Interpolating Polynomial

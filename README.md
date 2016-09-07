@@ -74,7 +74,7 @@ Usage
 
 ### Algebra
 ```php
-use Math\Algebra;
+use MathPHP\Algebra;
 
 // Greatest common divisor (GCD)
 $gcd = Algebra::gcd(8, 12);
@@ -91,7 +91,7 @@ $factors = Algebra::factors(12); // returns [1, 2, 3, 4, 6, 12]
 
 ### Functions - Map - Single Array
 ```php
-use Math\Functions\Map\Single;
+use MathPHP\Functions\Map\Single;
 
 $x = [1, 2, 3, 4];
 
@@ -110,7 +110,7 @@ $mins        = Single::min($x, 3);      // [1, 2, 3, 3]
 
 ### Functions - Map - Multiple Arrays
 ```php
-use Math\Functions\Map\Multi;
+use MathPHP\Functions\Map\Multi;
 
 $x = [10, 10, 10, 10];
 $y = [1,   2,  5, 10];
@@ -132,7 +132,7 @@ $sums = Multi::add($x, $y, $z); // [15, 17, 21, 27]
 
 ### Functions - Special Functions
 ```php
-use Math\Functions\Special;
+use MathPHP\Functions\Special;
 
 // Gamma function Γ(z)
 $z = 4;
@@ -185,7 +185,7 @@ $sigmoid = Special::sigmoid($t);
 
 ### Linear Algebra - Matrix
 ```php
-use Math\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\Matrix;
 
 $matrix = [
     [1, 2, 3],
@@ -295,7 +295,7 @@ $Aᵢⱼ  = $A[$mᵢ][$nⱼ];    // ArrayAccess
 
 ### Linear Algebra - Vector
 ```php
-use Math\LinearAlgebra\Vector;
+use MathPHP\LinearAlgebra\Vector;
 
 $vector = [1, 2, 3];
 
@@ -328,7 +328,7 @@ print($A); // [1, 2, 3]
 
 ### Numerical Analysis - Interpolation
 ```php
-use Math\NumericalAnalysis\Interpolation;
+use MathPHP\NumericalAnalysis\Interpolation;
 
 // Interpolation is a method of constructing new data points with the range
 // of a discrete set of known data points.
@@ -357,7 +357,7 @@ $p(3) // 16
 
 ### Numerical Analysis - Numerical Integration
 ```php
-use Math\NumericalAnalysis\NumericalIntegration;
+use MathPHP\NumericalAnalysis\NumericalIntegration;
 
 // Numerical integration approximates the definite integral of a function.
 // Each integration method can take input in two ways:
@@ -428,7 +428,7 @@ $∫f⟮x⟯dx = MidpointRule::approximate($f⟮x⟯, $start, $end, $n); // inpu
 
 ### Numerical Analysis - Root Finding
 ```php
-use Math\NumericalAnalysis\RootFinding;
+use MathPHP\NumericalAnalysis\RootFinding;
 
 // Root-finding methods solve for a root of a polynomial.
 
@@ -472,7 +472,7 @@ $x   = FixedPointIteration::solve($g⟮x⟯, $a, $b, $p, $tol); // Solve for x w
 
 ### Probability - Combinatorics
 ```php
-use Math\Probability\Combinatorics;
+use MathPHP\Probability\Combinatorics;
 
 list($n, $x, $k) = [10, 3, 4];
 
@@ -507,7 +507,7 @@ $divisions = Combinatorics::multinomial($groups);
 
 ### Probability - Continuous Distributions
 ```php
-use Math\Probability\Distribution\Continuous;
+use MathPHP\Probability\Distribution\Continuous;
 
 // Beta distribution
 $α   = 1; // shape parameter
@@ -630,7 +630,7 @@ $random  = DistributionName::rand(...$params);               // A random number 
 
 ### Probability - Discrete Distributions
 ```php
-use Math\Probability\Distribution\Discrete;
+use MathPHP\Probability\Distribution\Discrete;
 
 // Binomial distribution
 $n = 2;   // number of events
@@ -676,7 +676,7 @@ $cdf = ShiftedGeometric::CDF($k, $p);
 
 ### Probability - Distribution Tables
 ```php
-use Math\Probability\Distribution\Table;
+use MathPHP\Probability\Distribution\Table;
 
 // Provided solely for completeness' sake.
 // It is statistics tradition to provide these tables.
@@ -709,7 +709,7 @@ $χ²    = $table[$df][$p];
 
 ### Sequences - Basic
 ```php
-use Math\Sequence\Basic;
+use MathPHP\Sequence\Basic;
 
 $n = 5; // Number of elements in the sequence
 
@@ -748,7 +748,7 @@ $fact = Basic::factorial($n);
 
 ### Sequences - Advanced
 ```php
-use Math\Sequence\Advanced;
+use MathPHP\Sequence\Advanced;
 
 $n = 6; // Number of elements in the sequence
 
@@ -783,7 +783,7 @@ $hexagons = Advanced::heptagonalNumber($n)
 
 ### Statistics - ANOVA
 ```php
-use Math\Statistics\ANOVA;
+use MathPHP\Statistics\ANOVA;
 
 $sample1 = [1, 2, 3];
 $sample2 = [3, 4, 5];
@@ -855,7 +855,7 @@ print_r($anova);
 
 ### Statistics - Averages
 ```php
-use Math\Statistics\Average;
+use MathPHP\Statistics\Average;
 
 $numbers = [13, 18, 13, 14, 13, 16, 14, 21, 13];
 
@@ -923,7 +923,7 @@ print_r($averages);
 
 ### Statistics - Correlation
 ```php
-use Math\Statistics\Correlation;
+use MathPHP\Statistics\Correlation;
 
 $X = [1, 2, 3, 4, 5];
 $Y = [2, 3, 4, 4, 6];
@@ -957,7 +957,7 @@ print_r($stats);
 
 ### Statistics - Descriptive
 ```php
-use Math\Statistics\Descriptive;
+use MathPHP\Statistics\Descriptive;
 
 $numbers = [13, 18, 13, 14, 13, 16, 14, 21, 13];
 
@@ -1055,7 +1055,7 @@ $summary = Descriptive::fiveNumberSummary($numbers);
 
 ### Statistics - Distributions
 ```php
-use Math\Statistics\Distribution;
+use MathPHP\Statistics\Distribution;
 
 $grades = ['A', 'A', 'B', 'B', 'B', 'B', 'C', 'C', 'D', 'F'];
 
@@ -1088,7 +1088,7 @@ Distribution::stemAndLeafPlot($values, Distribution::PRINT);
 
 ### Statistics - Experiments
 ```php
-use Math\Statistics\Experiment;
+use MathPHP\Statistics\Experiment;
 
 $a = 28;   // Exposed and event present
 $b = 129;  // Exposed and event absent
@@ -1115,7 +1115,7 @@ $LL          = Experiment::likelihoodRatioSS($sensitivity, $specificity);
 
 ### Statistics - Random Variables
 ```php
-use Math\Statistics\RandomVariable;
+use MathPHP\Statistics\RandomVariable;
 
 $X = [1, 2, 3, 4];
 $Y = [2, 3, 4, 5];
@@ -1151,7 +1151,7 @@ $ci = RandomVariable::confidenceInterval($μ, $n, $σ, $cl); // Array( [ci] => 3
 
 ### Statistics - Regressions
 ```php
-use Math\Statistics\Regression;
+use MathPHP\Statistics\Regression;
 
 $points = [[1,2], [2,3], [4,5], [5,7], [6,8]];
 
@@ -1238,7 +1238,7 @@ $Ŷ          = $regression->yHat();
 
 ### Statistics - Significance Testing
 ```php
-use Math\Statistics\Significance;
+use MathPHP\Statistics\Significance;
 
 // Z test (z and p values)
 $Hₐ = 20;   // Alternate hypothesis (M Sample mean)
